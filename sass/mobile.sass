@@ -1,0 +1,485 @@
+@import typography
+
+// Reset some styles
+.wp-frontend
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  background-color: white
+  padding-top: 50px
+
+  a
+    outline: 0
+    &:focus
+      outline: 0
+
+  // A limited width, centred container
+  .container
+    max-width: 1100px !important
+    margin: 0px auto !important
+
+// The site header
+header#site-header
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  background-color: $brand-red
+  color: $bg-grey
+  box-sizing: border-box
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.1)
+  background-size: cover
+  background-position: 0%
+  background-repeat: no-repeat
+  position: fixed
+  top: 0px
+  z-index: 6
+  div.container
+    width: 100%
+    position: relative
+    padding: 10px
+  span#more
+    display: none
+  i.big
+    display: flex
+    height: 50px
+    width: 50px
+    justify-content: center
+    align-items: center
+    transition: 0.8s
+    font-size: 1.5em
+    &:active
+      background-color: rgba(255,255,255,0.5)
+      transition: 0.1s
+
+  a.custom-logo-link img
+    width: 100px
+    height: auto
+
+  nav#top-navigation
+    display: none
+
+  nav#main-navigation
+    height: 100%
+    width: 60%
+    max-width: 300px
+    position: fixed
+    top: 0px
+    left: 0px
+    background-color: $bg-grey
+    box-shadow: 2px 0px 2px 1px rgba(0,0,0,0.2)
+    transform: translate3d(-103%,0px,0px)
+    transition: 0.1s ease-out
+    z-index: 99
+    // Extra class to make mobile-first menu visible
+    &.visible
+      transform: translate3d(0%,0px,0px)
+    i.fa-close
+      color: $light-grey
+      font-size: 1.5em
+    i.fa-search
+      display: none
+    form.search-form
+      display: none
+    ul
+      margin: 30px 0px 0px 15px
+      list-style-type: none
+      li
+        font-family: $h-stack
+        font-size: 1.5em
+        padding-bottom: 10px
+        a
+          color: $mid-grey
+          &:hover
+            text-decoration: underline
+
+// The site footer
+footer#site-footer
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 100%
+  background-color: $dark-grey
+  color: $bg-grey
+  box-shadow: 0px -2px 2px rgba(0,0,0,0.1)
+
+  section.widgets
+    padding: 30px 10px
+    width: 100%
+    // Hide left and right widgets on mobile
+    aside:last-of-type, aside:first-of-type
+      display: none
+    aside
+      h2
+        color: #969696
+        margin-bottom: 5px
+      div.textwidget
+        p
+          margin-bottom: 5px
+          color: $light-grey
+      ul
+        list-style: none
+        li
+          font-family: $p-stack
+          a
+            color: $bg-grey
+
+
+  p#copyright-info
+    width: 100%
+    color: #969696
+    text-align: center
+    font-size: 0.9em
+    padding: 20px
+    background-color: #3E3E3E
+    a
+      color: #dfdfdf
+
+// Hide sidebars on mobile
+main
+  aside.sidebar
+    display: none
+
+section.desktop-article-masthead
+  display: none
+
+article.page.radio
+  padding-top: 40px
+
+article.single
+  div.featured-image
+    height: 250px
+    background-position: center
+    background-size: cover
+    margin-bottom: 10px
+    background-color: #efefef
+    div.credit
+      display: none
+  h5
+    font-family: $h-stack
+    margin: 0px 10px
+    font-size: 1.1em
+    color: $brand-red
+    ul
+      list-style-type: none
+  h1
+    font-size: 2.2em
+    margin: 10px
+    line-height: 1.1em
+  div.star-rating
+    color: $brand-red
+    margin: 10px
+    i
+      margin-right: 3px
+      font-size: 1.3em
+  section.content
+    max-width: 100%
+    overflow: hidden
+    padding-bottom: 10px
+    .video-wrapper
+      position: relative
+      padding-bottom: 56.25%
+      height: 0
+      margin-bottom: 25px
+      iframe
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+    iframe
+      max-width: 100%
+    span, p
+      margin: 10px
+      font-size: 1.1em
+    hr
+      border: none
+      border-top: 1px dotted #dfdfdf
+    blockquote
+      margin: 25px 10px
+      border-top: 1px dotted #dfdfdf
+      font-size: 2em
+      p
+        font-family: $h-stack
+        margin: 10px 0px
+    h1, h2, h3, h4, h5
+      font-size: 1.7em
+      margin: 25px 10px 10px 10px
+    div.wp-caption
+      width: 100% !important
+      max-width: 100% !important
+      img
+        margin: 0px
+      p.wp-caption-text
+        font-size: 0.9em
+        color: $light-grey
+        margin: 0px 10px 10px 10px
+    img
+      width: 100%
+      height: auto
+      margin: 10px 0px
+    ul, ol
+      margin: 10px
+      list-style-type: disc
+      padding: 10px 10px 10px 20px
+      li
+        font-family: $p-stack
+        color: $mid-grey
+
+  section.meta-bar
+    margin: 10px
+    border-top: 1px dotted #dfdfdf
+    border-bottom: 1px dotted #dfdfdf
+    padding: 5px 0px
+    color: $light-grey
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    div
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      flex: 1
+    span.author
+      display: none
+    ul.share-buttons
+      li
+        display: inline-block
+        a
+          background-color: $brand-red
+          color: $bg-grey
+          display: flex
+          justify-content: center
+          align-items: center
+          border-radius: 50px
+          height: 35px
+          width: 35px
+          &:hover
+            text-decoration: none
+            filter: brightness(1.1)
+    span
+      font-family: $p-stack
+      color: $light-grey
+      font-size: 0.9em
+      i
+        margin-right: 5px
+
+  section.recommended
+    padding: 10px
+    h2
+      font-size: 1.2em
+      border-top: 1px dotted #dfdfdf
+      font-weight: 100
+      padding-top: 5px
+      margin-bottom: 10px
+    ul.recommendations
+      width: 100%
+      list-style-type: none
+      li
+        margin-bottom: 20px
+        a:hover
+          h4
+            text-decoration: underline
+        div
+          width: 100%
+          height: 0px
+          padding-bottom: 56%
+          margin: 0px
+        h4
+          margin-top: 5px
+          font-size: 1.5em
+          span
+            color: $brand-red
+
+section.grid-container
+  padding: 40px 10px
+  padding-top: 100px
+  position: relative
+  &.promoted
+    padding-top: 40px
+  &:nth-of-type(even)
+    background-color: $bg-grey
+    ul.grid
+      li.top-story div.image h5
+          background-color: $bg-grey
+
+  h2
+    top: 40px
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    text-align: center
+    font-size: 2em
+    color: $brand-red
+    border-bottom: 3px solid $brand-red
+  ul.grid
+    width: 100%
+    display: flex
+    flex-direction: column
+    list-style: none
+    li.top-story
+      a:hover
+        h3
+          text-decoration: underline
+      div.image
+        width: 100%
+        height: 0px
+        padding-bottom: 56%
+        background-color: #efefef
+        position: relative
+        margin-bottom: 20px
+        transition: 0.1s
+        background-position: center
+        background-size: cover
+        h5
+          position: absolute
+          bottom: -15px
+          left: 0px
+          font-size: 1em
+          padding: 5px 7px 5px 0px
+          display: inline-block
+          background-color: white
+          color: $brand-red
+      h3
+        font-size: 2em
+        text-decoration-color: $mid-grey
+      p
+        margin-top: 5px
+        color: $light-grey
+        text-decoration: none !important
+
+    ul.trails
+      display: flex
+      list-style: none
+      flex-direction: row
+      margin-top: 15px
+      li.trail
+        width: calc(50% - 5px)
+        margin-right: 10px
+        &:nth-of-type(2)
+          margin-right: 0px
+        &:last-of-type
+          display: none
+        a:hover
+          div.image
+            filter: brightness(1.05)
+          h3
+            text-decoration: underline
+        div.image
+          width: 100%
+          height: 0px
+          padding-bottom: 56%
+          background-color: #efefef
+          margin-bottom: 5px
+          background-position: center
+          background-size: cover
+        h3 span
+            color: $brand-red
+
+aside.sidebar
+  div.widget
+    margin-bottom: 30px
+    h2
+      font-size: 1.1em
+      border-top: 1px dotted #dfdfdf
+      font-weight: 100
+      padding-top: 5px
+      margin-bottom: 10px
+    ul.popular-posts
+      list-style-type: none
+      li
+        margin-bottom: 10px
+
+        a
+          display: flex
+          flex-direction: row
+          align-items: flex-start
+          div
+            width: 100px
+            height: 56px
+            margin-right: 10px
+            background-color: #efefef
+            background-position: center
+            background-size: cover
+            transition: 0.1s
+          h4
+            flex: 1
+            color: $light-grey
+          &:hover
+            h4
+              text-decoration: underline
+
+section.chronological-list
+  background-color: $bg-grey
+  div.container
+    padding: 20px 10px
+    h3
+      font-size: 2.2em
+      margin-bottom: 20px
+      color: $mid-grey
+      span
+        color: $light-grey
+    ul
+      list-style-type: none
+      li
+        margin-bottom: 10px
+        a
+          display: flex
+          flex-direction: row
+          &:hover
+            h4
+              text-decoration: underline
+          div.featured-image
+            background-color: #efefef
+            flex: 1
+            width: 40%
+            height: 0px
+            padding-bottom: 30%
+            margin-right: 10px
+            background-position: center
+            background-size: cover
+          div
+            flex: 1
+            h4
+              font-size: 1.2em
+            h5
+              font-size: 1em
+              color: $light-grey
+              margin-bottom: 5px
+    div.pagination
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      a
+        display: inline-block
+        padding: 15px 20px
+        color: $bg-grey
+        background-color: $dark-red
+        font-family: $h-stack
+        border-radius: 40px
+        margin: 20px 0px
+        font-size: 1.4em
+        &:hover
+          filter: brightness(1.1)
+
+section.not-found
+  padding: 50px 10px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  text-align: center
+  img
+    max-width: 160px
+  h1
+
+    font-size: 3em
+    margin: 30px 0px 10px 0px
+  p
+    color: $light-grey
+    font-size: 1.3em
+    max-width: 390px

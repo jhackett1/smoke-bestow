@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("../fonts/bebas-neue.otf"); }
+
+.wp-frontend * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px; }
+
+.wp-frontend h1, .wp-frontend h2, .wp-frontend h3, .wp-frontend h4, .wp-frontend h5 {
+  font-family: "Bebas Neue", Oswald, sans-serif;
+  color: #505050;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400 !important; }
+
+.wp-frontend ul {
+  padding: 0px;
+  margin: 0px; }
+
+.wp-frontend p {
+  font-family: "Open Sans Condensed", Helvetica, sans-serif;
+  color: #505050; }
+
+.wp-frontend a {
+  text-decoration: none;
+  color: #bb2d42; }
+
+.wp-frontend header a:hover, .wp-frontend footer a:hover, .wp-frontend article a:hover {
+  text-decoration: underline; }

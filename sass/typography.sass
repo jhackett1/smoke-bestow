@@ -1,0 +1,49 @@
+// //////////////////////////////////
+// BASIC TYPOGRAPHY STYLES AND COLORS
+// //////////////////////////////////
+
+// Fonts
+@font-face
+  font-family: 'Bebas Neue'
+  src: url('../fonts/bebas-neue.otf')
+
+// Color scheme
+$brand-red: #bb2d42
+$dark-red: #A42739
+$brand-blue: #254461
+$dark-grey: #2d2d2d
+$mid-grey: #505050
+$light-grey: #969696
+$bg-grey: #f6f6f6
+
+// Default font stacks
+$h-stack: "Bebas Neue", Oswald, sans-serif
+$p-stack: "Open Sans Condensed", Helvetica, sans-serif
+
+// Class added to all frontend pages
+.wp-frontend
+  *
+    box-sizing: border-box
+    padding: 0px
+    margin: 0px
+
+  // Basic font and text styles
+  h1, h2, h3, h4, h5
+    font-family: $h-stack
+    color: $mid-grey
+    -webkit-font-smoothing: antialiased
+    font-weight: 400 !important
+  ul
+    padding: 0px
+    margin: 0px
+  p
+    font-family: $p-stack
+    color: $mid-grey
+  a
+    text-decoration: none
+    color: $brand-red
+
+  header, footer, article
+    a
+      &:hover
+        text-decoration: underline
